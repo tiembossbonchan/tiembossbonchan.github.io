@@ -175,7 +175,62 @@ footer{text-align:center;padding:20px 16px;font-size:14px;color:var(--nhat)}
  .sp .the{padding:10px}
  .hai-nut{grid-template-columns:1fr}
 }
-</style>
+/* dt-gon */
+/* Riêng điện thoại (≤600px): gọn hơn, nút to dễ bấm. Không ảnh hưởng bản máy tính. */
+@media (max-width:600px){
+ header .khung{height:56px;gap:8px}
+ .logo{font-size:16px;gap:8px}.logo img{width:32px;height:32px}.logo small{font-size:9px}
+ nav a{margin-left:10px;font-size:13px}
+ nav a.goi{padding:7px 12px}
+ .tab{top:calc(env(safe-area-inset-top,0px) + 56px);flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-inline:-16px;padding-inline:16px}
+ .tab::-webkit-scrollbar{display:none}
+ .tab a{white-space:nowrap;padding:8px 14px;font-size:14px}
+ .hero{padding-block:28px 32px}
+ .hero .khung{gap:20px}
+ .hero h1{font-size:30px}
+ .hero p{font-size:16px;margin:10px 0 18px}
+ .hero .nut{display:block;text-align:center;margin:0 0 10px}
+ .anh-bia{border-radius:14px}
+ .diem{gap:8px}
+ .diem div{padding:10px 12px;border-radius:12px}
+ .diem b{font-size:17px}
+ .diem span{font-size:13px;line-height:1.4;display:block}
+ section{padding-block:32px}
+ h2{font-size:23px}
+ .mo-ta{margin-bottom:18px;font-size:15px}
+ .dm{grid-template-columns:1fr;gap:10px}
+ .dm .the{display:grid;grid-template-columns:56px 1fr;column-gap:14px;padding:14px 16px;border-radius:14px}
+ .dm .icon{width:56px;height:56px;border-radius:16px;margin:0;grid-row:1 / span 3}
+ .dm .icon svg{width:34px;height:34px}
+ .dm h3{font-size:17px;margin-bottom:2px}
+ .dm p{font-size:14px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+ .dm .xem{margin-top:6px;font-size:14px}
+ .keos-noi{gap:20px}
+ .keos-noi .anh{max-width:none}
+ .keos-noi .anh img{aspect-ratio:4/3}
+ .ly-do{gap:10px;margin:12px 0 18px}
+ .ly-do div{grid-template-columns:36px 1fr;gap:10px}
+ .ly-do i{width:36px;height:36px;font-size:15px}
+ .ke-nho{gap:10px;margin-top:20px}
+ .ke-nho a{padding:10px 8px}
+ .ke-nho img{height:110px}
+ .ke-nho b{font-size:13px}
+ .dai-anh{gap:8px}
+ .dai-anh img{border-radius:12px}
+ .buoc{gap:14px}
+ .buoc h3{font-size:18px}
+ .sp .the{padding:10px;border-radius:12px}
+ .sp h3{font-size:14px}
+ .sp p{font-size:13px}
+ .gia{font-size:16px;margin:6px 0 8px}
+ .sp .nut{padding:9px 6px;font-size:14px}
+ .nhom{margin-bottom:32px}
+ .nhom h2{font-size:21px}
+ .lien-he .luoi{grid-template-columns:1fr;gap:12px}
+ .lien-he .the{padding:16px}
+ .chi-so div{grid-template-columns:88px 1fr 40px;gap:8px;font-size:13px}
+ .ct .phai{padding:18px}.ct h3{font-size:21px}
+}</style>
 </head>
 <body>
 <header>
