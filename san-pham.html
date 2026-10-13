@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sản phẩm - Tiệm Boss Bốn Chân</title>
+<style>
+:root{--tim:#3b2a6b;--cam:#f26b3a;--dao:#fde8dc;--kem:#fff8f3;--chu:#2a2140;--nhat:#6b6280}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Segoe UI",Roboto,Arial,sans-serif;color:var(--chu);background:var(--kem);line-height:1.6}
+a{color:inherit;text-decoration:none}
+.khung{max-width:1080px;margin:0 auto;padding:0 16px}
+header{background:var(--tim);color:#fff;position:sticky;top:0;z-index:5}
+header .khung{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-weight:800;font-size:20px}
+nav a{margin-left:20px;font-size:15px;opacity:.9}
+nav a:hover{opacity:1;color:var(--dao)}
+.hero{background:linear-gradient(120deg,var(--dao),#fff3ec);padding:56px 0}
+.hero .khung{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center}
+.hero h1{font-size:44px;line-height:1.15;color:var(--tim)}
+.hero h1 span{color:var(--cam)}
+.hero p{font-size:18px;color:var(--nhat);margin:16px 0 28px}
+.nut{display:inline-block;padding:13px 24px;border-radius:999px;font-weight:700;margin:0 10px 10px 0}
+.nut.chinh{background:var(--cam);color:#fff}
+.nut.phu{border:2px solid var(--tim);color:var(--tim)}
+.nut:hover{transform:translateY(-2px)}
+.anh-bia{width:100%;border-radius:20px;box-shadow:0 12px 30px rgba(59,42,107,.18);aspect-ratio:4/3;object-fit:cover}
+section{padding:56px 0}
+h2{font-size:30px;color:var(--tim);margin-bottom:8px}
+.mo-ta{color:var(--nhat);margin-bottom:28px}
+.luoi{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px}
+.the{background:#fff;border-radius:16px;padding:24px 20px;box-shadow:0 4px 14px rgba(59,42,107,.08)}
+/* danh mục có icon */
+.dm{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.dm .the{display:flex;flex-direction:column;border:2px solid transparent;transition:.2s}
+.dm .the:hover{border-color:var(--cam);transform:translateY(-3px)}
+.icon{width:84px;height:84px;border-radius:24px;background:var(--dao);display:grid;place-items:center;margin-bottom:14px}
+.icon svg{width:52px;height:52px;fill:none;stroke:var(--tim);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.icon svg .cam{stroke:var(--cam)}
+.icon svg .to{fill:var(--cam);stroke:none}
+.dm h3{font-size:18px;color:var(--tim);margin-bottom:6px}
+.dm p{font-size:15px;color:var(--nhat);flex:1}
+.xem{margin-top:14px;font-weight:700;color:var(--cam);font-size:15px}
+/* trang sản phẩm */
+.tab{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.tab a{padding:9px 18px;border-radius:999px;background:#fff;border:2px solid var(--dao);font-weight:600;font-size:15px}
+.tab a.dang-chon{background:var(--tim);border-color:var(--tim);color:#fff}
+.nhom{margin-bottom:44px;scroll-margin-top:80px}
+.nhom h2{font-size:24px}
+.sp{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.sp .the{padding:16px;display:flex;flex-direction:column}
+.sp img{width:100%;aspect-ratio:1;object-fit:contain;background:#fff;border-radius:12px;margin-bottom:12px}
+.sp h3{font-size:16px;line-height:1.4;color:var(--tim);margin-bottom:6px}
+.sp p{font-size:14px;color:var(--nhat);flex:1}
+.gia{font-size:18px;font-weight:800;color:var(--cam);margin:10px 0}
+.sp .nut{text-align:center;margin:0;padding:10px;font-size:15px}
+.lien-he{background:var(--tim);color:#fff}
+.lien-he h2{color:#fff}
+.lien-he .mo-ta{color:#d9d2ee}
+.lien-he .the{background:rgba(255,255,255,.08);box-shadow:none;border-top:4px solid var(--cam)}
+.lien-he .the h3{color:var(--dao)}
+.lien-he .the a{font-weight:700;font-size:18px}
+footer{text-align:center;padding:20px 16px;font-size:14px;color:var(--nhat)}
+footer small{display:block;margin-top:6px;font-size:12px}
+footer small a{text-decoration:underline}
+@media (max-width:720px){
+ nav a{margin-left:12px;font-size:14px}
+ .logo{font-size:17px}
+ .hero .khung{grid-template-columns:1fr}
+ .hero h1{font-size:34px}
+ section{padding:40px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="khung">
+  <a class="logo" href="index.html">Tiệm Boss Bốn Chân</a>
+  <nav><a href="san-pham.html">Sản phẩm</a><a href="index.html#lien-he">Liên hệ</a></nav>
+ </div>
+</header>
+
+<section>
+ <div class="khung">
+  <h2>Sản phẩm</h2>
+  <p class="mo-ta">Bạn gọi 0904 948 828 hoặc nhắn tin fanpage để đặt hàng.</p>
+  <div class="tab" id="tab"></div>
+  <div id="danh-sach"></div>
+ </div>
+</section>
+
+<footer>© 2026 Tiệm Boss Bốn Chân</footer>
+
+<script>
+// Muốn thêm, sửa sản phẩm: chỉ cần sửa danh sách bên dưới.
+var anh = "https://www.petmart.vn/wp-content/uploads/";
+var NHOM = [
+ {id:"thuc-an", ten:"Thức ăn thú cưng", sp:[
+  ["Thức ăn cho chó con cỡ nhỏ ROYAL CANIN Mini Puppy", "Hạt khô cho chó con thuộc giống nhỏ, dưới 10 tháng tuổi.", 225000, "2021/06/thuc-an-cho-cho-con-co-nho-royal-canin-mini-puppy1-300x300.jpg"],
+  ["Thức ăn cho mèo con ROYAL CANIN Kitten", "Hạt khô cho mèo con dưới 12 tháng tuổi, có bổ sung lợi khuẩn.", 130000, "2021/06/thuc-an-cho-meo-con-royal-canin-kitten-300x300.jpg"],
+  ["Pate cho mèo vị cá ngừ CAT SEA FISH Pure Tuna Meat", "Pate cá ngừ nguyên chất, dùng được cho mèo mọi giống và độ tuổi.", 30000, "2015/12/pate-cho-meo-vi-ca-ngu-nguyen-chat-cat-sea-fish-pure-tuna-meat-300x300.jpg"]]},
+ {id:"phu-kien", ten:"Phụ kiện", sp:[
+  ["Vòng cổ kèm dây dắt cỡ mini HAND IN HAND", "Bộ vòng cổ và dây dắt bằng nylon cho chó nhỏ, chó mèo con.", 70000, "2019/05/vong-co-cho-meo-kem-day-dat-co-mini-hand-in-hand-300x300.jpg"],
+  ["Bình uống nước gài chuồng BOBO", "Bình nhựa trong, gắn lên thành chuồng để bé uống nước.", 80000, "2013/03/binh-uong-nuoc-cho-cho-meo-gai-chuong-bobo-300x300.jpg"],
+  ["Thảm mát giải nhiệt PAW Pet Cool Mat", "Thảm giữ mát khoảng 27 đến 28 độ C, giúp bé nằm dễ chịu ngày nóng.", 195000, "2014/08/tham-mat-giai-nhiet-cho-cho-meo-paw-pet-cool-mat-300x300.jpg"]]},
+ {id:"cham-soc", ten:"Sản phẩm chăm sóc", sp:[
+  ["Gói sữa tắm trị nấm JOYCE & DOLLS dùng thử", "Gói sữa tắm cho chó mèo có da nhạy cảm, bị nấm hoặc ngứa.", 10000, "2014/05/sua-tam-tri-nam-joyce-dolls-dung-thu-cho-cho-meo-300x300.jpg"],
+  ["Lược chải lông đầu lưỡi mềm BOBO Pet Comb", "Lược cán inox, đầu lưỡi mềm, dùng cho lông thẳng và lông xoăn.", 85000, "2016/08/luoc-chai-long-cho-meo-dau-luoi-mem-bobo-pet-comb7-300x300.jpg"],
+  ["Kềm cắt móng PAW Safety Guard Clipper", "Kềm cắt móng có miếng chắn an toàn, dùng cho mọi giống chó mèo.", 70000, "2016/09/cat-bam-mong-cho-meo-paw-safety-guard-clipper-300x300.jpg"]]},
+ {id:"do-choi", ten:"Đồ chơi", sp:[
+  ["Đồ chơi bóng thừng BOBO", "Bóng thừng cotton cỡ S, màu giao ngẫu nhiên, cho bé gặm và kéo.", 30000, "2016/09/do-choi-cho-cho-meo-dang-bong-thung-bobo-300x300.jpg"],
+  ["Bóng nhựa có chuông BOBO", "Bóng nhựa có chuông bên trong, đường kính 7,5 cm, nặng dưới 30 g.", 45000, "2016/09/bong-do-choi-cho-cho-meo-co-chuong-nhua-bobo-1010-size-s-300x300.jpg"],
+  ["Đồ chơi cần câu cho mèo PAW", "Cần câu đồ chơi giúp mèo chạy nhảy và chơi cùng chủ.", 75000, "2013/07/do-choi-can-cau-cho-meo-paw-300x300.jpg"]]},
+ {id:"bo-sung", ten:"Thực phẩm bổ sung dinh dưỡng", sp:[
+  ["Vitamin tổng hợp cho chó VEGEBRAND Fruit Vitamin", "Vitamin tổng hợp cho chó, hỗ trợ tiêu hóa và giúp chó ăn ngon hơn.", 170000, "2016/01/thuoc-bo-sung-vitamin-tong-hop-cho-cho-vegebrand-fruit-vitamin-300x300.jpg"],
+  ["Súp thưởng cho mèo CIAO Hairball Control vị gà", "Súp thưởng vị gà, hỗ trợ mèo tiêu búi lông trong ruột.", 40000, "2021/05/sup-thuong-cho-meo-ciao-hairball-control-tieu-bui-long-300x300.jpg"],
+  ["Xương gặm sạch răng VEGEBRAND 360 Bone", "Xương gặm giúp chó làm sạch răng và giảm cao răng.", 10000, "2019/04/xuong-cho-cho-gam-sach-rang-vegebrand-360-bone-prevent-tartar-300x300.jpg"]]}
+];
+var fanpage = "https://www.facebook.com/profile.php?id=61594353481976";
+var tab = "", ds = "";
+NHOM.forEach(function (n) {
+ tab += '<a href="#' + n.id + '">' + n.ten + '</a>';
+ ds += '<div class="nhom" id="' + n.id + '"><h2>' + n.ten + '</h2><div class="luoi sp">';
+ n.sp.forEach(function (s) {
+  ds += '<div class="the"><img src="' + anh + s[3] + '" alt="' + s[0].replace(/"/g, "") + '"><h3>' + s[0].replace(/&/g, "&amp;") + '</h3><p>' + s[1] + '</p>' +
+   '<div class="gia">' + s[2].toLocaleString("vi-VN") + ' đồng</div>' +
+   '<a class="nut chinh" href="' + fanpage + '" target="_blank" rel="noopener">Hỏi mua</a></div>';
+ });
+ ds += '</div></div>';
+});
+document.getElementById("tab").innerHTML = tab;
+document.getElementById("danh-sach").innerHTML = ds;
+function chon() {
+ document.querySelectorAll("#tab a").forEach(function (a) { a.classList.toggle("dang-chon", a.getAttribute("href") === location.hash); });
+ if (location.hash) { var el = document.querySelector(location.hash); if (el) el.scrollIntoView(); }
+}
+window.addEventListener("hashchange", chon); chon();
+</script>
+</body>
+</html>
